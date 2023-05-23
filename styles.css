@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+/* Importing Montserrat Font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
 
 body{
     background-color: lightgray;
@@ -16,9 +17,9 @@ body{
 
 .main-heading{
     position: absolute;
-    top: 35px;
+    top: 47px;
     left: 35%;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     text-align: center;
 }
 
@@ -33,6 +34,7 @@ body{
     margin-top: 45px;
 }
 
+/* Styling the error screen*/
 .error-screen{
     display: none;
 }
@@ -43,6 +45,7 @@ body{
     border-radius: 50%;
 }
 
+/*Styling the main container below the heading*/
 .container{
     position: absolute;
     text-align: center;
@@ -54,7 +57,7 @@ body{
     min-height: 435px;
     margin: auto;
     margin-top: 90px;
-    margin-bottom: 50px;
+    margin-bottom: 50px;;
     background-color: white;
     border-radius: 5px;
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
@@ -62,10 +65,11 @@ body{
         rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
-#imgIcon{
+#imgIcon {
     margin-top: 45px;
 }
 
+/*Used to create a gap between dashed border and top of the container*/
 .gap-creator{
     font-size: 0.5rem;
     visibility: hidden;
@@ -81,7 +85,7 @@ body{
 }
 
 .drop-section:hover{
-    background-color: #f3fcf5;
+    background-color: #F3FCF5;
     transition: background-color 0.5s ease-in-out;
 }
 
@@ -112,13 +116,15 @@ body{
     transition-duration: 0.2s;
 }
 
-.drag-over-effecr div.col:first-child{
+/*Styling the drag over effect for when a file is dragged and dropped*/
+.drag-over-effect div.col:first-child{
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
     transform: scale(1.1);
 }
-.drag-over-effecr div.col:last-child{
+
+.drag-over-effect div.col:last-child{
     opacity: 1;
     visibility: visible;
     transform: scale(1);
@@ -129,8 +135,7 @@ body{
     margin-bottom: 20px;
 }
 
-.drop-section span,
-.drop-section button{
+.drop-section span, .drop-section button{
     display: block;
     margin: auto;
     color: black;
@@ -171,6 +176,7 @@ body{
     color: #000000;
 }
 
+/*Styling the file elements which will be displayed as they are uploaded*/
 .list-section li{
     display: flex;
     margin: 8px 0px;
@@ -231,8 +237,8 @@ body{
     transition-duration: 0.4s;
 }
 
-.list-section li .col svg.cross,
-.list-section li .col svg.tick{
+/*Styling the success or failure display of a file*/
+.list-section li .col svg.cross, .list-section li .col svg.tick{
     fill: #8694d2;
     background-color: #dee6fd;
     position: relative;
@@ -247,19 +253,16 @@ body{
     background-color: transparent;
 }
 
-.list-section li.complete span,
-.list-section li.complete .file-progress,
-.list-section li.complete svg.cross{
+.list-section li.complete span, .list-section li.complete .file-progress, .list-section li.complete svg.cross{
     display: none;
     border: 5px solid gray;
 }
 
-.list-section li.in-prog .fil-size,
-.list-section li.in-prog svg.tick{
+.list-section li.in-prog .file-size, .list-section li.in-prog svg.tick{
     display: none;
-    border: 5px solid gray;
 }
 
+/*Styling the interface to display when there are no files uploaded in the past 3 months*/
 .list-empty{
     width: 430px;
     height: 100px;
@@ -271,11 +274,13 @@ body{
     align-items: center;
     border-radius: 2px;
 }
+
 .list-empty p{
     opacity: 0.5;
     font-size: small;
 }
 
+/*Styling and arranging the 3 different SVG icons on the static screen*/
 .upload-icon{
     position: relative;
 }
@@ -283,7 +288,9 @@ body{
 .left-img{
     position: absolute;
     z-index: -1;
+    /* stroke: green; */
     top: 25px;
+    z-index: -1;
     left: 50px;
     transform: rotate(-10deg);
 }
@@ -296,6 +303,7 @@ body{
     transform: rotate(10deg);
 }
 
+/*Styling the color and stroke of the SVG icons on hover*/
 .drop-section:hover #Left-Document{
     stroke: hsl(132, 71%, 46%);
     stroke-width: 1.5px;
@@ -311,12 +319,13 @@ body{
 .drop-section:hover #Center-Img{
     stroke: hsl(132, 71%, 46%);
     stroke-width: 1.5px;
-    fill: #d2f3d8;
+    fill: #D2F3D8;
     transition-property: fill, stroke;
     transition: 0.5s ease-in-out;
     background-color: transparent;
 }
 
+/*Adding border and making other changes to the list of files as they are uploaded*/
 li{
     border: 1px solid gray;
     border-radius: 0px;
@@ -327,11 +336,11 @@ li{
 }
 
 .drop-section:hover #Rectangle{
-    fill: #5dd272;
+    fill: #5DD272;
     transition: fill 0.5s ease-in-out;
 }
 
 .drop-section:hover #Rectangle-Copy-9{
-    fill: #89de98;
+    fill: #89DE98;
     transition: fill 0.5s ease-in-out;
 }
